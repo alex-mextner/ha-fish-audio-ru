@@ -1,0 +1,9 @@
+{
+    "config_subentries": {
+        "tts": {
+            "abort": {
+                "reconfigure_successful": "TTS-stemmen din er oppdatert. Integrasjonen lastes n\u00e5 inn p\u00e5 nytt med de nye innstillingene."
+            }
+        }
+    }
+}

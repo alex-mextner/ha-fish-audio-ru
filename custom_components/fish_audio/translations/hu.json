@@ -1,0 +1,91 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "A fi\u00f3k m\u00e1r konfigur\u00e1lva van",
+            "cannot_connect": "Sikertelen csatlakoz\u00e1s",
+            "invalid_auth": "\u00c9rv\u00e9nytelen hiteles\u00edt\u00e9s"
+        },
+        "error": {
+            "already_configured": "Az eszk\u00f6z m\u00e1r konfigur\u00e1lva van",
+            "cannot_connect": "Nem siker\u00fclt csatlakozni, ellen\u0151rizze az API kulcsot \u00e9s a h\u00e1l\u00f3zati kapcsolatot.",
+            "invalid_auth": "\u00c9rv\u00e9nytelen hiteles\u00edt\u00e9s. Ellen\u0151rizze az API kulcsot. Az API kulcsot a [Fish Audio API kulcsok]({api_keys_url}) oldalr\u00f3l szerezheti be.",
+            "unknown": "V\u00e1ratlan hiba"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_key": "API kulcs"
+                },
+                "data_description": {
+                    "api_key": "A szem\u00e9lyes API kulcsa a Fish Audio szolg\u00e1ltat\u00e1s el\u00e9r\u00e9s\u00e9hez."
+                },
+                "description": "Adja meg Fish Audio API kulcs\u00e1t a kezd\u00e9shez.\n\nHa m\u00e9g nincs fi\u00f3kja, ingyenes regisztr\u00e1ci\u00f3t v\u00e9gezhet a [Fish Audio]({signup_url}) oldalon.",
+                "title": "Csatlakoz\u00e1s a Fish Audio szolg\u00e1ltat\u00e1shoz"
+            }
+        }
+    },
+    "config_subentries": {
+        "tts": {
+            "abort": {
+                "already_configured": "Ez a TTS hang m\u00e1r be van \u00e1ll\u00edtva.",
+                "cannot_connect": "Nem siker\u00fclt csatlakozni a Fish Audio szolg\u00e1ltat\u00e1shoz",
+                "entry_not_loaded": "Nem lehet TTS hangot hozz\u00e1adni, am\u00edg a konfigur\u00e1ci\u00f3 le van tiltva.",
+                "no_models_found": "Nem tal\u00e1lhat\u00f3k hangok a megadott sz\u0171r\u0151k alapj\u00e1n. M\u00f3dos\u00edtsa a sz\u0171r\u0151ket, \u00e9s pr\u00f3b\u00e1lja \u00fajra.",
+                "reconfigure_successful": "A TTS hang sikeresen friss\u00edtve lett. Az integr\u00e1ci\u00f3 most \u00fajraindul az \u00faj be\u00e1ll\u00edt\u00e1sokkal."
+            },
+            "entry_type": "TTS hang",
+            "error": {
+                "cannot_connect": "Sikertelen csatlakoz\u00e1s",
+                "no_model_selected": "A folytat\u00e1shoz ki kell v\u00e1lasztania egy hangot.",
+                "no_models_found": "Nem tal\u00e1lhat\u00f3k hangok a megadott sz\u0171r\u0151k alapj\u00e1n."
+            },
+            "initiate_flow": {
+                "reconfigure": "TTS hang \u00fajrakonfigur\u00e1l\u00e1sa",
+                "user": "TTS hang hozz\u00e1ad\u00e1sa"
+            },
+            "step": {
+                "init": {
+                    "data": {
+                        "language": "Sz\u0171r\u00e9s nyelv szerint",
+                        "self_only": "Csak a saj\u00e1t priv\u00e1t hangjaim megjelen\u00edt\u00e9se",
+                        "sort_by": "Hangok rendez\u00e9se",
+                        "title": "Sz\u0171r\u00e9s n\u00e9v szerint"
+                    },
+                    "data_description": {
+                        "language": "Csak azokat a hangokat jelen\u00edti meg, amelyek t\u00e1mogatj\u00e1k a kiv\u00e1lasztott nyelvet.",
+                        "self_only": "Ha be van jel\u00f6lve, csak azokat a hangokat jelen\u00edti meg, amelyeket szem\u00e9lyesen l\u00e9trehozott vagy kl\u00f3nozott.",
+                        "sort_by": "V\u00e1lassza ki a sorrendet, amelyben a hangok megjelennek.",
+                        "title": "Hangok sz\u0171r\u00e9se n\u00e9v alapj\u00e1n."
+                    },
+                    "description": "Alkalmazzon sz\u0171r\u0151ket a hanglista sz\u0171k\u00edt\u00e9s\u00e9hez, majd kattintson a Mehet gombra az eredm\u00e9nyek megtekint\u00e9s\u00e9hez.",
+                    "title": "Hangkiv\u00e1laszt\u00e1si sz\u0171r\u0151k"
+                },
+                "model": {
+                    "data": {
+                        "backend": "AI hangmodell",
+                        "latency": "K\u00e9sleltet\u00e9si m\u00f3d",
+                        "name": "Elnevez\u00e9s",
+                        "voice_id": "Hang"
+                    },
+                    "data_description": {
+                        "backend": "V\u00e1lassza ki az AI modellt, amely a hangot gener\u00e1lni fogja.",
+                        "latency": "V\u00e1lassza ki a k\u00e9sleltet\u00e9si m\u00f3dot: 'norm\u00e1l' a szok\u00e1sos feldolgoz\u00e1shoz vagy 'kiegyens\u00falyozott' az optimaliz\u00e1lt sebess\u00e9ghez.",
+                        "name": "Adjon meg egy egyedi nevet ehhez a TTS hanghoz, hogy k\u00f6nnyen azonos\u00edthat\u00f3 legyen a Home Assistantban.",
+                        "voice_id": "V\u00e1lasszon az el\u00e9rhet\u0151 hangok list\u00e1j\u00e1b\u00f3l vagy adjon meg manu\u00e1lisan egy konkr\u00e9t hang azonos\u00edt\u00f3t."
+                    },
+                    "description": "V\u00e1lassza ki a k\u00edv\u00e1nt hangot \u00e9s az AI modellt a besz\u00e9dszint\u00e9zishez.",
+                    "title": "V\u00e1lassza ki a hangot \u00e9s a modellt"
+                }
+            }
+        }
+    },
+    "selector": {
+        "sort_by": {
+            "options": {
+                "created_at": "Leg\u00fajabb",
+                "score": "Legmagasabb pontsz\u00e1m",
+                "task_count": "Legt\u00f6bbet haszn\u00e1lt"
+            }
+        }
+    }
+}

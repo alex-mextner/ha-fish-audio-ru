@@ -1,0 +1,13 @@
+{
+  "domain": "fish_audio",
+  "name": "Fish Audio",
+  "codeowners": ["@noambav"],
+  "config_flow": true,
+  "documentation": "https://github.com/alex-mextner/ha-fish-audio-ru",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "loggers": ["fish_audio_sdk"],
+  "quality_scale": "bronze",
+  "requirements": ["fish-audio-sdk==1.1.0"],
+  "version": "1.0.0"
+}
