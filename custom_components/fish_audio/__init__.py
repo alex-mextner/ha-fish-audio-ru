@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import logging
 
+import httpx
+
 from fishaudio import AsyncFishAudio
 from fishaudio.exceptions import AuthenticationError, FishAudioError
 
@@ -28,7 +30,9 @@ async def async_setup_entry(hass: HomeAssistant, entry: FishAudioConfigEntry) ->
         await client.account.get_credits()
     except AuthenticationError as exc:
         raise ConfigEntryAuthFailed(f"Invalid API key: {exc}") from exc
-    except FishAudioError as exc:
+    except (FishAudioError, httpx.HTTPError, OSError) as exc:
+        # A dropped connection at HA start-up (httpx.ConnectError) used to leave the entry in
+        # setup_error for good; ConfigEntryNotReady makes HA retry.
         raise ConfigEntryNotReady(f"Error connecting to Fish Audio: {exc}") from exc
 
     entry.runtime_data = client
